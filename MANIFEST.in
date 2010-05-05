@@ -1,0 +1,9 @@
+include setup.py
+include MANIFEST.in
+include LICENSE
+include README
+
+include PyOpenGraph/*
+
+exclude *.pyc
+exclude *.pyo
