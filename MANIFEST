@@ -1,6 +1,5 @@
 LICENSE
 MANIFEST.in
-README
 setup.py
 PyOpenGraph\PyOpenGraph.py
 PyOpenGraph\__init__.py

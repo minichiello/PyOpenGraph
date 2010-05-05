@@ -40,7 +40,7 @@ To install, download the archive at http://pypi.python.org/pypi/PyOpenGraph and 
 
     print og.metadata['title'] # => Oceans
 
-    og.is_valid # => return True or False
+    og.is_valid() # => return True or False
 ''',
     classifiers = [
         'Development Status :: 5 - Production/Stable',
