@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name = 'PyOpenGraph',
-    version = '0.1',
+    version = '0.2',
     description = 'PyOpenGraph is a library written in Python for parsing Open Graph protocol information from web sites.',
     author = 'Gerson Minichiello',
     author_email = 'gerson.minichiello@gmail.com',
@@ -43,7 +43,7 @@ To install, download the archive at http://pypi.python.org/pypi/PyOpenGraph and 
     og.is_valid() # => return True or False
 ''',
     classifiers = [
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
