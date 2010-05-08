@@ -58,17 +58,12 @@ class PyOpenGraphParser(HTMLParser):
     def __init__(self):
         HTMLParser.__init__(self)
         self.properties = {}
-        self.value_temp = ''
     
     def handle_starttag(self, tag, attrs):
         if tag == 'meta':
-            for attr, value in attrs:
-                if attr == 'property' and value.startswith('og:'):
-                    self.value_temp = value.replace('og:', '')
-                if attr == 'content':
-                    if self.value_temp != '':
-                        self.properties[self.value_temp] = value
-                        self.value_temp = ''
+            attrdict = dict(attrs)
+            if attrdict.has_key('property') and attrdict['property'].startswith('og:') and attrdict.has_key('content'):
+                self.properties[attrdict['property'].replace('og:', '')] = attrdict['content']
 
     def handle_endtag(self, tag):
         pass
