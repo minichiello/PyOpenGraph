@@ -4,6 +4,7 @@ setup(
     name = 'PyOpenGraph',
     version = '0.2',
     description = 'PyOpenGraph is a library written in Python for parsing Open Graph protocol information from web sites.',
+    packages = ['PyOpenGraph', ],
     author = 'Gerson Minichiello',
     author_email = 'gerson.minichiello@gmail.com',
     url='http://github.com/minichiello/PyOpenGraph',
