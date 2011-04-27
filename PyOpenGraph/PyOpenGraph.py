@@ -22,7 +22,10 @@
 
 import rdfadict
 
-OPENGRAPH_NS = "http://opengraphprotocol.org/schema/"
+OPENGRAPH_NAMESPACES = [
+  "http://opengraphprotocol.org/schema/",
+  "http://ogp.me/ns#",
+]
 
 class PyOpenGraph(object):
    
@@ -35,8 +38,9 @@ class PyOpenGraph(object):
     def get_properties(self, data):
         content = {}
         for k, v in data.iteritems():
-            if k.startswith(OPENGRAPH_NS) and len(v)>0:
-                content[k.replace(OPENGRAPH_NS, '')] = v[0]
+            for ns in OPENGRAPH_NAMESPACES:
+                if k.startswith(ns) and len(v)>0:
+                    content[k.replace(ns, '')] = v[0]
         return content
     
     def __str__(self):
