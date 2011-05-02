@@ -23,6 +23,7 @@
 import rdfadict
 
 OPENGRAPH_NAMESPACES = [
+  "http://opengraphprotocol.org/schema",
   "http://opengraphprotocol.org/schema/",
   "http://ogp.me/ns#",
 ]
