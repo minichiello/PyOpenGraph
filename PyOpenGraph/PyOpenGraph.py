@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 #Copyright (c) 2010 Gerson Minichiello
 #
@@ -30,9 +31,12 @@ OPENGRAPH_NAMESPACES = [
 
 class PyOpenGraph(object):
    
-    def __init__(self, url):
+    def __init__(self, url=None, xml=None):
         parser = rdfadict.RdfaParser()
-        result = parser.parse_url(url)
+        if not xml:
+            result = parser.parse_url(url)
+        else:
+            result = parser.parse_string(xml, url)
         data = result[url]
         self.metadata = self.get_properties(data)
 
