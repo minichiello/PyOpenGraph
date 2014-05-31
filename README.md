@@ -1,3 +1,5 @@
+** ATTENTION: This repository is not maintained anymore. **
+
 # PyOpenGraph
 
 PyOpenGraph is a library written in Python for parsing Open Graph protocol information from web sites.
